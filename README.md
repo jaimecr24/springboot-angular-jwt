@@ -2,7 +2,7 @@
 
 ## Creación de la base de datos con docker:
 
-docker run --name dbtest -e MYSQL_ROOT_PASSWORD=123456 -e TZ="Europe/Madrid" -p 33006:3306 -d mysql
+docker run --name testdb -e MYSQL_ROOT_PASSWORD=123456 -e TZ="Europe/Madrid" -p 33006:3306 -d mysql
 
 <p>Desde dentro del terminal entrar en MySql:</p>
 <p>#mysql -p123456</p>
