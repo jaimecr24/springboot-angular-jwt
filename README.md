@@ -6,7 +6,7 @@ docker run --name testdb -e MYSQL_ROOT_PASSWORD=123456 -e TZ="Europe/Madrid" -p 
 
 <p>Desde dentro del terminal entrar en MySql:</p>
 <p>#mysql -p123456</p>
-<p>>create database dbtest;</p>
+<p>>create database testdb;</p>
 
 ## Datos para las pruebas:
 Usuarios: user, mod, admin
