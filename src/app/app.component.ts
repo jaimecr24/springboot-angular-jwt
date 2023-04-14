@@ -38,6 +38,7 @@ export class AppComponent implements OnInit {
     this.authService.logout().subscribe({
       next: res => {
         this.storageService.clean();
+        window.location.reload();
       },
       error: err => {
         console.log(err);

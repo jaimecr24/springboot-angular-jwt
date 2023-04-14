@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
         this.isLoggedIn = true;
         this.roles = this.storageService.getUser().roles;
         this._router.navigateByUrl('/home');
+        window.location.reload();
       },
       error: err => {
         this.errorMessage = err.error.message;
