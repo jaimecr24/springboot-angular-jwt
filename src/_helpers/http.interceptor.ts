@@ -19,9 +19,10 @@ export class HttpRequestInterceptor implements HttpInterceptor {
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         req = req.clone({ withCredentials: true }); // Necesario para que incorpore la cookie recibida en las solicitudes al servidor.
+        console.log(req);
         return next.handle(req).pipe(
             catchError((error) => {
-                if (error instanceof HttpErrorResponse && !req.url.includes('auth/sigin') && error.status === 401)
+                if (error instanceof HttpErrorResponse && !req.url.includes('auth/signin') && error.status === 401)
                 {
                     return this.handle401Error(req, next);
                 }

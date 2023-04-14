@@ -7,12 +7,13 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.example.jwt.refreshtoken.domain.RefreshToken;
 import com.example.jwt.refreshtoken.infrastructure.RefreshTokenRepo;
 import com.example.jwt.security.infrastructure.TokenRefreshException;
 import com.example.jwt.usuario.infrastructure.UsuarioRepo;
+
+import jakarta.transaction.Transactional;
 
 @Service
 public class RefreshTokenService

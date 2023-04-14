@@ -67,13 +67,13 @@ public class JwtUtils
 
     public ResponseCookie getCleanJwtCookie()
     {
-        ResponseCookie cookie = ResponseCookie.from(jwtCookie, null).path("/api").build();
+        ResponseCookie cookie = ResponseCookie.from(jwtCookie, null).path("/api").maxAge(0).build();
         return cookie;
     }
 
     public ResponseCookie getCleanJwtRefreshCookie()
     {
-        ResponseCookie cookie = ResponseCookie.from(jwtRefreshCookie, null).path("/api/auth/refreshtoken").build();
+        ResponseCookie cookie = ResponseCookie.from(jwtRefreshCookie, null).path("/api/auth/refreshtoken").maxAge(0).build();
         return cookie;
     }
 
