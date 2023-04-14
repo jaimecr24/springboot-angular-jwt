@@ -1,5 +1,18 @@
 # Ejemplo integración Spring Boot + Angular + jwt + MySql (docker)
 
+## Creación del directorio de trabajo:
+
+<p>Crear proyecto para java desde start.spring.io</p>
+<p>Dentro del directorio crear proyecto de angular en 'client'<p>
+<p>$ng client</p>
+<p>Abrir terminal de ubuntu y ejecutar los siguientes comandos:</p>
+<p>$ cat client/.gitignore >> .gitignore</p>
+<p>$ rm -rf client/node* client/src/favicon.ico client/.gitignore client/.git</p>
+<p>$ cp -rf client/* .</p>
+<p>$ cp client/.??* .</p>
+<p>$ rm -rf client</p>
+<p>$ sed -i -e 's,dist/client,target/classes/static,' angular.json</p>
+
 ## Creación de la base de datos con docker:
 
 docker run --name testdb -e MYSQL_ROOT_PASSWORD=123456 -e TZ="Europe/Madrid" -p 33006:3306 -d mysql
