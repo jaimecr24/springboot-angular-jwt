@@ -4,7 +4,7 @@
 
 <p>Crear proyecto para java desde start.spring.io</p>
 <p>Dentro del directorio crear proyecto de angular en 'client'<p>
-<p>$ng client</p>
+<p>$ng new client</p>
 <p>Abrir terminal de ubuntu y ejecutar los siguientes comandos:</p>
 <p>$ cat client/.gitignore >> .gitignore</p>
 <p>$ rm -rf client/node* client/src/favicon.ico client/.gitignore client/.git</p>
